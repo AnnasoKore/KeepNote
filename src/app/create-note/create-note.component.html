@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-2 col-lg-1 xs-0  col-sm-0"></div>
+    <div class="col-md-8 col-lg-10  col-sm-12 xs-12 shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+      <div class="text-center mt-2 text-danger-emphasis bg-info-subtle shadow-sm p-3 mb-3 bg-body-tertiary rounded">
+        <button class="btn btn-primary btn-mm float-end" routerLink="/note" routerLinkActive="Active">Home</button>
+        <h3>Create New Note</h3>
+      </div>
+      <form class="form-group" #createNote="ngForm" name="createNote">
+        <div class="form-group">
+          <input type="text" name="title" id="title" maxlength="70" style="font-size: larger;" placeholder="Title...."
+            class="form-control form-control-lg" required #title="ngModel" ngModel />
+          <small class="text-danger" *ngIf="!title.valid && title.touched">Please enter title</small>
+        </div>
+        <div class="form-group">
+          <textarea class="form-control mt-1 note-color" [ngStyle]="{'colo:':'color'}" rows="15" name="notes" placeholder="NOTE HERE......" #notes="ngModel"
+            ngModel></textarea>
+        </div>
+        <div class="form-group">
+          <input type="color"  class="mt-2 form-control-color " id="fontColor" value="#000000" #color 
+            title="Choose font color">
+          <button class="btn btn-primary form-control-lg btn-sm float-end  mt-2" (click)="saveNote(createNote)"> Create
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-2 col-lg-1 xs-0 col-sm-0"></div>
+  </div>
+</div>

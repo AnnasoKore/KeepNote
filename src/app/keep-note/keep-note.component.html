@@ -1,0 +1,65 @@
+<div class="container">
+  <!-- <div class="row">
+        <div class="col-md-12 col-sm-12 col-lg-12 xs-12">
+            <div class="mt-1 text-danger-emphasis bg-info-subtle shadow-sm p-3 mb-1 bg-body-tertiary rounded">
+                <button class="btn btn-primary btn-mm float-end">New</button>
+                <h3>Keep Note</h3>
+            </div>
+        </div>
+    </div> -->
+  <div class="row">
+    <div class="col-md-12 col-sm-12 col-lg-12 xs-12">
+      <div class="mt-1 text-danger-emphasis bg-info-subtle shadow-sm p-3 mb-1 bg-body-tertiary rounded">
+        <form class="d-flex" #searchForm="ngForm">
+          <h4>Note</h4>
+          <input class="form-control ms-3 me-1" type="search" name="search" placeholder="Search By Title...."
+            #title="ngModel" ngModel aria-label="Search" [(ngModel)]="titleSearch" />
+          <!-- <button class="btn btn-outline-success btn-mm me-3" type="submit" (click)="searchNote(title)">Search</button> -->
+          <button class="btn btn-primary btn-mm float-end" routerLink="/addNote" routerLinkActive="Active">
+            New
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 col-sm-12 col-lg-12 xs-12 mt-2">
+      <table class="table shadow rounded">
+        <thead>
+          <tr>
+            <!-- <th class="col-sm-1 col-lg-2">SR No</th> -->
+            <th class="col-sm-2 clol-lg-3">Title</th>
+            <th class="col-sm-7 col-lg-7">Description</th>
+            <th class="col-sm-3 col-lg-2 text-center">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- <tr style="height: 3rem; overflow-y: scroll" *ngFor="let _noteData of noteData">
+                        <td class="col-sm-1 col-lg-2">{{ _noteData.id }}</td>
+                        <td class="col-sm-3 col-lg-3">{{ _noteData.title }}</td>
+                        <td class="col-sm-5 col-lg-5">{{ _noteData.Note }}</td>
+                        <td class="col-sm-3 col-lg-2">
+                            <button class="btn btn-secondary mt-2 btn-sm align-self-end">Edit</button>&nbsp;&nbsp;
+                            <button class="btn btn-secondary mt-2 btn-sm" (click)="deleteNote(_noteData.id)">Delete</button>
+                        </td>
+                    </tr> -->
+          <tr style="height: 3rem; overflow-y: scroll !important"
+            *ngFor="let searchNote of noteData | customFilter : titleSearch">
+            <!-- <td class="col-sm-1 col-lg-2">{{ searchNote.id }}</td> -->
+            <td class="col-sm-2 col-lg-3">{{ searchNote.title }}</td>
+            <td class="col-sm-7 col-lg-7">{{ searchNote.Note }}</td>
+            <td class="col-sm-3 col-lg-2 text-center">
+              <button class="btn btn-secondary mt-2 btn-sm align-self-end me-2 edit-btn" [routerLink]="['/edit',searchNote.id]"
+                routerLinkActive="active">
+                Edit
+              </button>
+              <button class="btn btn-secondary mt-2 btn-sm delete-btn" (click)="deleteNote(searchNote.id)">
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

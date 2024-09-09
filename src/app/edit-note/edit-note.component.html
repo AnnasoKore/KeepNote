@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="shadow-sm p-3 mb-5 bg-body-tertiary rounded col-md-12 col-lg-12 col-sm-12 xs-12">
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12 xs-12">
+                <div
+                    class="text-center mt-2 text-danger-emphasis bg-info-subtle shadow-sm p-3 mb-3 bg-body-tertiary rounded">
+                    <button class="btn btn-primary btn-mm float-end" routerLink="/note"
+                        routerLinkActive="Active" (click)="updateNote()" >Save</button>
+                    <h3>Edit Note</h3>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-12 col-sm-12 xs-12">
+                <form class="form-group" [formGroup]="editNoteForm" >
+                    <div class="form-group">
+                        <input type="text" name="title" id="title"  style="font-size: larger;"
+                            class="form-control form-control-lg" formControlName="title" />
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control mt-1" rows="15" name="note" formControlName="note"></textarea>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

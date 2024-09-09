@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
+.edit-btn:hover {
+    background-color: rgb(245, 208, 83);
+    color: black;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.473);
+}
+
+.delete-btn:hover {
+    background-color: rgb(255, 0, 0);
+    color: black;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.473);
+}

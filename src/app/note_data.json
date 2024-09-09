@@ -1,0 +1,49 @@
+{
+  "Note": [
+    {
+      "id": "e9f4",
+      "title": "Java OOPs",
+      "Note": "1. Encapsulation\n2.Abstraction\n3.Polymorphism\n4.Inheritance"
+    },
+    {
+      "id": "d71d",
+      "title": "Angular",
+      "Note": "1. Component\n2. Directives\n3. Data Bindin\n     1)Onw way Data Binding\n     2)Two way Data Binding\n"
+    },
+    {
+      "id": "c670",
+      "title": "Angular Component",
+      "Note": "Components is a basic building block of angular.\nIt is combination of four files that is -\n1) .css\n2).html\n3).ts\n4).spect.ts"
+    },
+    {
+      "id": "b3ab",
+      "title": "Asp",
+      "Note": "Creates Websites\nCreates Web Applications"
+    },
+    {
+      "id": "9d1b",
+      "title": "Angular",
+      "Note": "Singal Page Application"
+    },
+    {
+      "id": "a088",
+      "title": "CSS",
+      "Note": "Inline Css,\nEnternal Css,\nExternal Css,\nIt is used for styling purpose."
+    },
+    {
+      "id": "6778",
+      "title": "HTML",
+      "Note": "Creates static web pages"
+    },
+    {
+      "id": "9e12",
+      "title": "JavaScript",
+      "Note": "It creates backend logic"
+    },
+    {
+      "id": "a9bd",
+      "title": "Java",
+      "Note": "Write Onece Run Anywhere"
+    }
+  ]
+}
